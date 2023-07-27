@@ -8,12 +8,12 @@ public class PlayersController : MonoBehaviour
 {
     private Vector3 playerStartPosition;
 
-    bool correr = false;
-    bool tomar  = false;
-    bool accion = false;
+    private bool correr = false;
+    private bool tomar  = false;
+    private bool accion = false;
 
-    float ejeHorizontal;
-    float ejeVertical;
+    private float ejeHorizontal;
+    private float ejeVertical;
 
     Vector3 moveDirection;
     Vector2 facingDirection;
@@ -87,6 +87,7 @@ public class PlayersController : MonoBehaviour
         }
         else if (NumberOfThePlayer == 2)
         {
+            
             //--------------------------------
             //walking.
             ejeHorizontal = Input.GetAxis("Horizontal player 2");
@@ -100,6 +101,8 @@ public class PlayersController : MonoBehaviour
             //acciones
             tomar = Input.GetButton("tomar player 2");
             accion = Input.GetButton("accion player 2");
+
+            Debug.Log("nani");
         }
     }
 
