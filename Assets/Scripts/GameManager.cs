@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         else if (Input.GetButtonDown("Cancel"))
         {
             BackToMenu();
-        }*/ 
+        }*/
     }
 
     public void StartGame()
