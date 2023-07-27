@@ -16,12 +16,6 @@ public class GameManager : MonoBehaviour
 
     public static GameManager sharedInstanceGameManager;
 
-    //-----parte de ejemplo de actualización de meshes---
-    
-    public int collectedObject = 0;
-
-    //---------------------------------------------------
-
 
     private void Awake()
     {
@@ -73,42 +67,17 @@ public class GameManager : MonoBehaviour
     {
         if (newGameState == GameState.inGame)
         {
-            ReloadGame();
-            Time.timeScale = 1f;
-            MenuManager.sharedInstance.HideMainMenu();
-            MenuManager.sharedInstance.HidePausedGameMenu();
-            MenuManager.sharedInstance.showInGameMenu();
-            MenuManager.sharedInstance.HideGameOverMenu();
+
         }
         else if (newGameState == GameState.menu)
         {
-            Time.timeScale = 0f;
-            MenuManager.sharedInstance.showPausedGameMenu();
-            MenuManager.sharedInstance.HideInGameMenu();
+
         }
         else if (newGameState == GameState.gameOver)
         {
-            MenuManager.sharedInstance.showGameOverMenu();
-            MenuManager.sharedInstance.HideInGameMenu();
 
         }
         this.currentGameState = newGameState;
-    }
-
-
-    //-----parte de ejemplo de actualización de meshes---
-
-    /*public void PointosCollected(Pointo pointos)
-    {
-        collectedObject += pointos.value;
-    }*/
-
-    //---------------------------------------------------
-
-
-    private void ReloadGame()
-    {
-
     }
 
 }
