@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
     {
         if (newGameState == GameState.inGame)
         {
+            Time.timeScale = 1f;
             playerController1.StartGame();
             if (coop)
             {

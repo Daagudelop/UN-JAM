@@ -6,11 +6,18 @@ using UnityEngine.EventSystems;
 
 public class PlayersController : MonoBehaviour
 {
+    [SerializeField] public bool poseeSierra= false;
+    [SerializeField] public bool poseeVenda= false;
+    [SerializeField] public bool poseeMezclaCura= false;
+    [SerializeField] public bool poseeMezclaPosion = false;
+    [SerializeField] public bool poseeMezclaMuerte = false;
+    [SerializeField] public bool poseeResultadoMezcla= false;
+
     private Vector3 playerStartPosition;
 
-    private bool correr = false;
-    private bool tomar  = false;
-    private bool accion = false;
+    public bool correr = false;
+    public bool tomar  = false;
+    public bool accion = false;
 
     private float ejeHorizontal;
     private float ejeVertical;
@@ -161,6 +168,11 @@ public class PlayersController : MonoBehaviour
             Invoke("RestartPosition", 0.2f);
 
         }
+    }
+
+    public void ToHide()
+    {
+        
     }
 
 }

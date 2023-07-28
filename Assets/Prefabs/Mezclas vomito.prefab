@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: d4936e1ca4af9f044920ed5f4c21ea0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 9018011475049530290}
   - component: {fileID: 4726529146735020675}
   - component: {fileID: 8043611212494231895}
+  - component: {fileID: 4087578268831648398}
   m_Layer: 0
   m_Name: Mezclas vomito
   m_TagString: Untagged
@@ -119,7 +120,7 @@ Transform:
   m_Children:
   - {fileID: 3429210497548603835}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2545147687922740415
 SpriteRenderer:
@@ -335,3 +336,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &4087578268831648398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319606038808719751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71517959af63a694bbf806ef2ec10a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mezclaCura: 0
+  mezclaPoison: 1
+  mezclaMuerte: 0
+  sierra: 0
+  vendaje: 0
+  resultadoMezcla: 0

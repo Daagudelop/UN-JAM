@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4831829391757760339}
   - component: {fileID: 3531133673733872892}
   - component: {fileID: 2753094394803563952}
+  - component: {fileID: 354247161520166044}
   m_Layer: 0
   m_Name: Mezclas poison
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 2788340879905720124}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8421808938330921572
 SpriteRenderer:
@@ -251,6 +252,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &354247161520166044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7483541300278529617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71517959af63a694bbf806ef2ec10a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mezclaCura: 0
+  mezclaPoison: 0
+  mezclaMuerte: 1
+  sierra: 0
+  vendaje: 0
+  resultadoMezcla: 0
 --- !u!1 &7729248373394897889
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +342,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: c8e1e690dce3c304ba4dd2d629a89543, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

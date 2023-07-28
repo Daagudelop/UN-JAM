@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6051110365160677017}
   - component: {fileID: 1905163916357290662}
   - component: {fileID: 6334665348116779728}
+  - component: {fileID: -8215438621376584283}
   m_Layer: 0
   m_Name: meson
   m_TagString: Untagged
@@ -250,3 +251,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &-8215438621376584283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3736014202393265835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71517959af63a694bbf806ef2ec10a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mezclaCura: 0
+  mezclaPoison: 0
+  mezclaMuerte: 0
+  sierra: 0
+  vendaje: 0
+  resultadoMezcla: 0
