@@ -13,7 +13,17 @@ public class MezclaCura : MonoBehaviour
 
     private PlayersController playerController;
 
+    [SerializeField] private ParticleSystem Shine;
     //[SerializeField] PopUps popUpObj;
+
+    private void Awake()
+    {
+        //spriteRenderer = GetComponent<SpriteRenderer>();
+        if (Shine == null)
+        {
+            Shine = null;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -27,22 +37,33 @@ public class MezclaCura : MonoBehaviour
         
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        //ToReactAtPlayer(collision);
-    }*/
+        ToChangeColor(collision);
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        ToDetectPlayer(collision);
+        
+            ToDetectPlayer(collision);
     }
 
-    void ToReactAtPlayer(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!playerController.estaOcupada)
-        {
-            //popUpObj.popUp.sprite = popUpObj.mezclaCura;
-        }
+        ToStopSystem(collision);
+    }
+
+    void ToStopSystem(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+            Shine.Stop();
+    }
+
+    void ToChangeColor(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+            Shine.Play();
+        
     }
 
     void ToDetectPlayer(Collider2D collision)

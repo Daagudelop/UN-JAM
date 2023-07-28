@@ -93,7 +93,7 @@ public class PlayersController : MonoBehaviour
             moveDirection.y = ejeVertical;
             //--------------------------------
             //Running
-            correr = Input.GetButton("correr player 1");
+            correr = Input.GetButtonDown("correr player 1");
             //--------------------------------
             //acciones
             tomar = Input.GetButton("tomar player 1");
@@ -110,7 +110,7 @@ public class PlayersController : MonoBehaviour
             moveDirection.y = ejeVertical;
             //--------------------------------
             //Running
-            correr = Input.GetButton("correr player 2");
+            correr = Input.GetButtonDown("correr player 2");
             //--------------------------------
             //acciones
             tomar = Input.GetButton("tomar player 2");
