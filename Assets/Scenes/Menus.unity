@@ -756,6 +756,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1856350161391740377, guid: 478ba6b976853514297a278dfd5bb6a7, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1856350161391740379, guid: 478ba6b976853514297a278dfd5bb6a7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -911,6 +915,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3974909333140165721, guid: 896e021988aaaed4e8cddedb534e2060, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3974909333140165723, guid: 896e021988aaaed4e8cddedb534e2060, type: 3}
+      propertyPath: m_UiScaleMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3974909333140165733, guid: 896e021988aaaed4e8cddedb534e2060, type: 3}
@@ -1171,6 +1179,14 @@ PrefabInstance:
     - target: {fileID: 2359829819287304342, guid: 9773ab7de6a41e444a51f3bb47ca2e7a, type: 3}
       propertyPath: m_Name
       value: CanvasPlayMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359829819287304342, guid: 9773ab7de6a41e444a51f3bb47ca2e7a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359829819287304344, guid: 9773ab7de6a41e444a51f3bb47ca2e7a, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2359829819287304346, guid: 9773ab7de6a41e444a51f3bb47ca2e7a, type: 3}
       propertyPath: m_Pivot.x
@@ -1591,6 +1607,66 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1758093702}
+    - target: {fileID: 750631775864228684, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775864228684, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775864228684, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775864228684, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775864228684, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775864228684, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775864228684, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775864228684, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775864228684, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -172
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775864228684, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775864228685, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_margin.z
+      value: -359.92657
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775864228685, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_fontStyle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775864228685, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775864228685, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775969920298, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 750631775969920299, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1675,9 +1751,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 750631775969920341, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 750631775969920343, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
       propertyPath: m_Name
       value: CanvasGameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 750631775969920343, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 750631776179150957, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1692,7 +1776,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1758093700}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 750631775949641307, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5ca96d8b08cde94bbb7391a67319b1a, type: 3}
@@ -1935,6 +2020,10 @@ PrefabInstance:
     - target: {fileID: 5530976758793909419, guid: b4e05b127f314514da3d86bccb1b0069, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090836729424309268, guid: b4e05b127f314514da3d86bccb1b0069, type: 3}
+      propertyPath: Shine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6090836729424309268, guid: b4e05b127f314514da3d86bccb1b0069, type: 3}
       propertyPath: spriteRenderer

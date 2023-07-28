@@ -17,6 +17,8 @@ public class PlayersController : MonoBehaviour
     [SerializeField] public bool poseeMezclaPosion = false;
     [SerializeField] public bool poseeMezclaMuerte = false;
     [SerializeField] public bool poseeResultadoMezcla= false;
+    [SerializeField] public bool tijerasEstaCortando = false;
+    [SerializeField] public bool alquimiaEstaMezclando= false;
     [SerializeField] public bool estaOcupada = false;
 
     private Vector3 playerStartPosition;

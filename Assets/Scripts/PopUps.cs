@@ -51,6 +51,7 @@ public class PopUps : MonoBehaviour
         {
             popUp.sprite = vendaje;
         }
+        
     }
 
 }

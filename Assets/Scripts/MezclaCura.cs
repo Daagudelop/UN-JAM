@@ -10,6 +10,8 @@ public class MezclaCura : MonoBehaviour
     [SerializeField] bool sierra          = false;
     [SerializeField] bool vendaje         = false;
     [SerializeField] bool resultadoMezcla = false;
+    [SerializeField] bool tijeras         = false;
+    [SerializeField] bool alquimista      = false;
 
     private PlayersController playerController;
 
@@ -18,11 +20,8 @@ public class MezclaCura : MonoBehaviour
 
     private void Awake()
     {
-        //spriteRenderer = GetComponent<SpriteRenderer>();
-        if (Shine == null)
-        {
-            Shine = null;
-        }
+        Shine.Stop();
+
     }
 
     // Start is called before the first frame update
@@ -45,7 +44,7 @@ public class MezclaCura : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         
-            ToDetectPlayer(collision);
+        ToDetectPlayer(collision);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -63,6 +62,7 @@ public class MezclaCura : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
             Shine.Play();
+        
         
     }
 
@@ -83,7 +83,31 @@ public class MezclaCura : MonoBehaviour
                         collision.GetComponent<PlayersController>().poseeResultadoMezcla = false;
                         collision.GetComponent<PlayersController>().poseeSierra = false;
                         collision.GetComponent<PlayersController>().poseeVenda = false;
+                        collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
+                        collision.GetComponent<PlayersController>().alquimiaEstaMezclando = false;
                         //popUpObj.popUp.sprite = popUpObj.mezclaCura;
+                    }
+                    else if (tijeras)
+                    {
+                        collision.GetComponent<PlayersController>().poseeMezclaCura = false;
+                        collision.GetComponent<PlayersController>().poseeMezclaMuerte = false;
+                        collision.GetComponent<PlayersController>().poseeMezclaPosion = false;
+                        collision.GetComponent<PlayersController>().poseeResultadoMezcla = false;
+                        collision.GetComponent<PlayersController>().poseeSierra = false;
+                        collision.GetComponent<PlayersController>().poseeVenda = false;
+                        collision.GetComponent<PlayersController>().tijerasEstaCortando = true;
+                        collision.GetComponent<PlayersController>().alquimiaEstaMezclando = false;
+                    }
+                    else if (alquimista)
+                    {
+                        collision.GetComponent<PlayersController>().poseeMezclaCura = true;
+                        collision.GetComponent<PlayersController>().poseeMezclaMuerte = false;
+                        collision.GetComponent<PlayersController>().poseeMezclaPosion = false;
+                        collision.GetComponent<PlayersController>().poseeResultadoMezcla = false;
+                        collision.GetComponent<PlayersController>().poseeSierra = false;
+                        collision.GetComponent<PlayersController>().poseeVenda = false;
+                        collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
+                        collision.GetComponent<PlayersController>().alquimiaEstaMezclando = true;
                     }
                     else if (mezclaPoison)
                     {
@@ -93,6 +117,8 @@ public class MezclaCura : MonoBehaviour
                         collision.GetComponent<PlayersController>().poseeResultadoMezcla = false;
                         collision.GetComponent<PlayersController>().poseeSierra = false;
                         collision.GetComponent<PlayersController>().poseeVenda = false;
+                        collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
+                        collision.GetComponent<PlayersController>().alquimiaEstaMezclando = false;
                         //popUpObj.popUp.sprite = popUpObj.mezclaPoison;
                     }
                     else if (mezclaMuerte)
@@ -103,6 +129,8 @@ public class MezclaCura : MonoBehaviour
                         collision.GetComponent<PlayersController>().poseeResultadoMezcla = false;
                         collision.GetComponent<PlayersController>().poseeSierra = false;
                         collision.GetComponent<PlayersController>().poseeVenda = false;
+                        collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
+                        collision.GetComponent<PlayersController>().alquimiaEstaMezclando = false;
                         //popUpObj.popUp.sprite = popUpObj.mezclaMuerte;
 
                     }
@@ -114,6 +142,8 @@ public class MezclaCura : MonoBehaviour
                         collision.GetComponent<PlayersController>().poseeResultadoMezcla = false;
                         collision.GetComponent<PlayersController>().poseeSierra = true;
                         collision.GetComponent<PlayersController>().poseeVenda = false;
+                        collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
+                        collision.GetComponent<PlayersController>().alquimiaEstaMezclando = false;
                         //popUpObj.popUp.sprite = popUpObj.sierra;
                     }
                     else if (vendaje)
@@ -124,7 +154,9 @@ public class MezclaCura : MonoBehaviour
                         collision.GetComponent<PlayersController>().poseeResultadoMezcla = false;
                         collision.GetComponent<PlayersController>().poseeSierra = false;
                         collision.GetComponent<PlayersController>().poseeVenda = true;
-                       // popUpObj.popUp.sprite = popUpObj.vendaje;
+                        collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
+                        collision.GetComponent<PlayersController>().alquimiaEstaMezclando = false;
+                        // popUpObj.popUp.sprite = popUpObj.vendaje;
                     }
                     else if (resultadoMezcla)
                     {
@@ -134,6 +166,8 @@ public class MezclaCura : MonoBehaviour
                         collision.GetComponent<PlayersController>().poseeResultadoMezcla = true;
                         collision.GetComponent<PlayersController>().poseeSierra = false;
                         collision.GetComponent<PlayersController>().poseeVenda = false;
+                        collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
+                        collision.GetComponent<PlayersController>().alquimiaEstaMezclando = false;
                     }
                     
                     //playerController.estaOcupada = true;
