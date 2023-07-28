@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
 {
 
     public GameState currentGameState = GameState.menu;
+    [SerializeField] private PlayersController playerController1;
+    [SerializeField] private PlayersController playerController2;
+
 
     public static GameManager sharedInstanceGameManager;
 
@@ -35,20 +38,19 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        //Toca mirar hasta cuantos jugadores abran en pantalla al mismo tiempo y definir botones
-
-        /*if (Input.GetButtonDown("Submit"))
+        if (Input.GetButtonDown("Submit"))
         {
             StartGame();
         }
         else if (Input.GetButtonDown("Cancel"))
         {
             BackToMenu();
-        }*/
+        }
     }
 
     public void StartGame()
     {
+        Debug.Log("prendido");
         SetGameState(GameState.inGame);
 
     }
@@ -67,15 +69,23 @@ public class GameManager : MonoBehaviour
     {
         if (newGameState == GameState.inGame)
         {
-
+            playerController1.StartGame();
+            playerController2.StartGame();
+            MenuManager.sharedInstance.HideMainMenu();
+            MenuManager.sharedInstance.HidePausedGameMenu();
+            MenuManager.sharedInstance.showInGameMenu();
+            MenuManager.sharedInstance.HideGameOverMenu();
         }
         else if (newGameState == GameState.menu)
         {
-
+            Time.timeScale = 0f;
+            MenuManager.sharedInstance.showPausedGameMenu();
+            MenuManager.sharedInstance.HideInGameMenu();
         }
         else if (newGameState == GameState.gameOver)
         {
-
+            MenuManager.sharedInstance.showGameOverMenu();
+            MenuManager.sharedInstance.HideInGameMenu();
         }
         this.currentGameState = newGameState;
     }

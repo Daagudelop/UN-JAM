@@ -50,6 +50,7 @@ public class PlayersController : MonoBehaviour
         {
 
             playeRigidBody.velocity = Vector2.zero;
+        
         }
 
         //playeAnimator.SetBool(STATE_IS_MOVING, IsMoving());
@@ -67,7 +68,7 @@ public class PlayersController : MonoBehaviour
         }
     }
 
-        void ActionCollector()
+    void ActionCollector()
     {
         if (NumberOfThePlayer == 1)
         {
@@ -109,22 +110,19 @@ public class PlayersController : MonoBehaviour
     private void RestartPosition()
     {
         this.transform.position = playerStartPosition;
-        //this.playeRigidBody.velocity = Vector2.zero;
-        //playeAnimator.SetBool(STATE_IS_ALIVE, true);
     }
 
     void ToMove(float direc)
     {
         if (correr)
         {
-            transform.position += moveDirection * Time.deltaTime * moveSpeed * 2;
+            playeRigidBody.velocity = new Vector3(moveDirection.x, moveDirection.y, 0) * moveSpeed * 2;
             transform.rotation = Quaternion.identity;
-            //playeRigidBody.velocity = new Vector2(direc * 2, playeRigidBody.velocity.y);
         }
         else
         {
-            transform.position += moveDirection * Time.deltaTime * moveSpeed;
-            //playeRigidBody.velocity = new Vector2(direc, playeRigidBody.velocity.y);
+            playeRigidBody.velocity = new Vector3(moveDirection.x, moveDirection.y, 0) * moveSpeed;
+
         }
         LookingDirection();
     }
@@ -138,14 +136,31 @@ public class PlayersController : MonoBehaviour
         {
             playeSpriteRenderer.flipX = false;
         }
-        /*if (playeRigidBody.velocity.x < 0)
+    }
+
+    void Recoger()
+    {
+        if (tomar)
         {
-            playeSpriteRenderer.flipX = true;
+            
         }
-        else if (playeRigidBody.velocity.x > 0)
+    }
+
+    void Craft() 
+    {
+        if (accion)
         {
-            playeSpriteRenderer.flipX = false;
-        }*/
+
+        }
+    }
+
+    public void StartGame()
+    {
+        if (GameManager.sharedInstanceGameManager.currentGameState == GameState.gameOver)
+        {
+            Invoke("RestartPosition", 0.2f);
+
+        }
     }
 
 }
