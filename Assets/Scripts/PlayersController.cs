@@ -60,7 +60,7 @@ public class PlayersController : MonoBehaviour
     {
         if (GameManager.sharedInstanceGameManager.currentGameState == GameState.inGame)
         {
-            ToMove(moveSpeed);
+            ToMove();
         }
         else if (GameManager.sharedInstanceGameManager.currentGameState == GameState.gameOver)
         {
@@ -112,7 +112,7 @@ public class PlayersController : MonoBehaviour
         this.transform.position = playerStartPosition;
     }
 
-    void ToMove(float direc)
+    void ToMove()
     {
         if (correr)
         {
