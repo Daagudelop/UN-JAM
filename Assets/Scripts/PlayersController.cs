@@ -145,8 +145,15 @@ public class PlayersController : MonoBehaviour
                 playeRigidBody.velocity = Vector3.zero;
             }
         }
+
+
         DefineSpriteAnim();
         LookingDirection();
+
+        var Clamp = transform.position;
+        Clamp.x = Mathf.Clamp(transform.position.x, -8.2f, 8.2f);
+        Clamp.y = Mathf.Clamp(transform.position.y, -4.2f, 4.2f);
+        transform.position = Clamp;
     }
 
     private void DefineSpriteAnim()
