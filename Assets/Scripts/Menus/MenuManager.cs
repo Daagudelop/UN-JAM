@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
     public Canvas canvasPlayMenu;
     public Canvas canvasPausedMenu;
     public Canvas canvasGameOver;
-    public Canvas canvasGlobalSettings;
+    public HideShowSettingsPanel canvasGlobalSettings;
 
     // Start is called before the first frame update
     private void Awake()
@@ -37,12 +37,12 @@ public class MenuManager : MonoBehaviour
 
     public void showGlobalSettings()
     {
-        canvasGlobalSettings.enabled = true;
+        canvasGlobalSettings.showSettings();
     }
 
     public void HideGlobalSettings()
     {
-        canvasGlobalSettings.enabled = false;
+        canvasGlobalSettings.goBack();
     }
 
     public void showPausedGameMenu()

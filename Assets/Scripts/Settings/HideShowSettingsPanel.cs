@@ -8,10 +8,10 @@ public class HideShowSettingsPanel : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)))
+        /*if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)))
         {
             gameObject.SetActive(false);
-        }
+        }*/
     }
     public void showSettings()
     {

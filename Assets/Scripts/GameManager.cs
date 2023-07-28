@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayersController playerController1;
     [SerializeField] private PlayersController playerController2;
 
+    bool coop = true;
 
     public static GameManager sharedInstanceGameManager;
 
@@ -50,9 +51,16 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("prendido");
+        
+        coop = false;
         SetGameState(GameState.inGame);
+    }
 
+    public void StartGameCoop()
+    {
+
+        coop = true;
+        SetGameState(GameState.inGame);
     }
 
     public void GameOver()
@@ -70,7 +78,14 @@ public class GameManager : MonoBehaviour
         if (newGameState == GameState.inGame)
         {
             playerController1.StartGame();
-            playerController2.StartGame();
+            if (coop)
+            {
+                playerController2.StartGame();
+                playerController2.transform.position = new Vector3(5.26999998f, -0.09402439f, 0);
+            } else if (!coop)
+            {
+                playerController2.enabled = false;
+            }
             MenuManager.sharedInstance.HideMainMenu();
             MenuManager.sharedInstance.HidePausedGameMenu();
             MenuManager.sharedInstance.showInGameMenu();
