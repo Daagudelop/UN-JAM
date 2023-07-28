@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     bool coop = true;
 
+
     public static GameManager sharedInstanceGameManager;
 
 
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
             sharedInstanceGameManager = this;
         }
         //-----------------------
+
     }
 
     void Start()

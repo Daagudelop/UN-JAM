@@ -6,6 +6,11 @@ using UnityEngine.EventSystems;
 
 public class PlayersController : MonoBehaviour
 {
+    const string STATE_IS_UP = "isUp";
+    const string STATE_IS_DOWN = "isDown";
+    const string STATE_IS_HORIZONTAL = "isHorizontal";
+
+
     [SerializeField] public bool poseeSierra= false;
     [SerializeField] public bool poseeVenda= false;
     [SerializeField] public bool poseeMezclaCura= false;
@@ -121,18 +126,58 @@ public class PlayersController : MonoBehaviour
 
     void ToMove()
     {
+        
         if (correr)
         {
             playeRigidBody.velocity = new Vector3(moveDirection.x, moveDirection.y, 0) * moveSpeed * 2;
             transform.rotation = Quaternion.identity;
+
+            if (moveDirection.x == 0 && moveDirection.y == 0)
+            {
+                playeRigidBody.velocity = Vector3.zero;
+            }
         }
         else
         {
             playeRigidBody.velocity = new Vector3(moveDirection.x, moveDirection.y, 0) * moveSpeed;
-
+            if (moveDirection.x == 0 && moveDirection.y == 0)
+            {
+                playeRigidBody.velocity = Vector3.zero;
+            }
         }
+        DefineSpriteAnim();
         LookingDirection();
     }
+
+    private void DefineSpriteAnim()
+    {
+        if (moveDirection.x == 0 && moveDirection.y == 0)
+        {
+            playeAnimator.SetBool(STATE_IS_HORIZONTAL, false);
+            playeAnimator.SetBool(STATE_IS_UP, false);
+            playeAnimator.SetBool(STATE_IS_DOWN, false);
+        }
+        else if (moveDirection.x != 0)
+        {
+            playeAnimator.SetBool(STATE_IS_HORIZONTAL, true);
+            playeAnimator.SetBool(STATE_IS_UP, false);
+            playeAnimator.SetBool(STATE_IS_DOWN, false);
+        }
+
+        if (moveDirection.y > 0)
+        {
+            playeAnimator.SetBool(STATE_IS_HORIZONTAL, false);
+            playeAnimator.SetBool(STATE_IS_UP, true);
+            playeAnimator.SetBool(STATE_IS_DOWN, false);
+        }
+        else if (moveDirection.y < 0)
+        {
+            playeAnimator.SetBool(STATE_IS_HORIZONTAL, false);
+            playeAnimator.SetBool(STATE_IS_UP, false);
+            playeAnimator.SetBool(STATE_IS_DOWN, true);
+        }
+    }
+
     void LookingDirection()
     {
         if (moveDirection.x < 0)
