@@ -7,7 +7,7 @@ public class HealthBar : MonoBehaviour
 
     [SerializeField]private Transform bar;
     [SerializeField] private bool isRunning = true;
-    [SerializeField] private float timeToFill = 1;
+    [SerializeField] private float timeToFill = 60;
     float health = 1f;
     float contadorcito;
     float tiempoFaltante;
