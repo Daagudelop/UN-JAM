@@ -59,7 +59,7 @@ public class PlayersController : MonoBehaviour
     {
         if (GameManager.sharedInstanceGameManager.currentGameState == GameState.inGame)
         {
-            ToMove(moveSpeed);
+            ToMove();
         }
         else if (GameManager.sharedInstanceGameManager.currentGameState == GameState.gameOver)
         {
@@ -113,18 +113,17 @@ public class PlayersController : MonoBehaviour
         //playeAnimator.SetBool(STATE_IS_ALIVE, true);
     }
 
-    void ToMove(float direc)
+    void ToMove()
     {
         if (correr)
         {
-            transform.position += moveDirection * Time.deltaTime * moveSpeed * 2;
+            playeRigidBody.velocity = new Vector3(moveDirection.x, moveDirection.y, 0) * moveSpeed * 2;
             transform.rotation = Quaternion.identity;
-            //playeRigidBody.velocity = new Vector2(direc * 2, playeRigidBody.velocity.y);
         }
         else
         {
-            transform.position += moveDirection * Time.deltaTime * moveSpeed;
-            //playeRigidBody.velocity = new Vector2(direc, playeRigidBody.velocity.y);
+            playeRigidBody.velocity = new Vector3(moveDirection.x, moveDirection.y, 0) * moveSpeed;
+
         }
         LookingDirection();
     }
