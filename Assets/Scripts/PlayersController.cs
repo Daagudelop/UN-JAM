@@ -29,7 +29,9 @@ public class PlayersController : MonoBehaviour
     private float ejeVertical;
 
     Vector3 moveDirection;
+    Vector3 DashDir;
     Vector2 facingDirection;
+
 
     [SerializeField] float moveSpeed;
     [SerializeField] int NumberOfThePlayer;
@@ -93,7 +95,10 @@ public class PlayersController : MonoBehaviour
             moveDirection.y = ejeVertical;
             //--------------------------------
             //Running
-            correr = Input.GetButton("correr player 1");
+            if( Input.GetButtonDown("correr player 1"))
+            {
+                correr = true;
+            }
             //--------------------------------
             //acciones
             tomar = Input.GetButton("tomar player 1");
@@ -110,7 +115,10 @@ public class PlayersController : MonoBehaviour
             moveDirection.y = ejeVertical;
             //--------------------------------
             //Running
-            correr = Input.GetButton("correr player 2");
+            if (Input.GetButtonDown("correr player 2"))
+            {
+                correr = true;
+            }
             //--------------------------------
             //acciones
             tomar = Input.GetButton("tomar player 2");
@@ -128,11 +136,9 @@ public class PlayersController : MonoBehaviour
     void ToMove()
     {
         
-        if (correr)
+        if (correr == true)
         {
-            playeRigidBody.velocity = new Vector3(moveDirection.x, moveDirection.y, 0) * moveSpeed * 2;
-            transform.rotation = Quaternion.identity;
-
+            StartCoroutine(Dash());
             if (moveDirection.x == 0 && moveDirection.y == 0)
             {
                 playeRigidBody.velocity = Vector3.zero;
@@ -157,6 +163,14 @@ public class PlayersController : MonoBehaviour
         transform.position = Clamp;
     }
 
+    private IEnumerator Dash()
+    {
+        playeRigidBody.velocity = new Vector3(moveDirection.x, moveDirection.y, 0) * moveSpeed * 3;
+        yield return new WaitForSeconds(0.1f);
+        playeRigidBody.velocity = new Vector3(moveDirection.x, moveDirection.y, 0) * moveSpeed;
+        correr = false;
+
+    }
     private void DefineSpriteAnim()
     {
         if (moveDirection.x == 0 && moveDirection.y == 0)
