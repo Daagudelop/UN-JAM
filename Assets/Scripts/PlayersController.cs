@@ -108,8 +108,7 @@ public class PlayersController : MonoBehaviour
 
     private void RestartPosition()
     {
-        this.transform.position = playerStartPosition;
-        //this.playeRigidBody.velocity = Vector2.zero;
+        this.playeRigidBody.velocity = Vector2.zero;
         //playeAnimator.SetBool(STATE_IS_ALIVE, true);
     }
 
@@ -117,14 +116,12 @@ public class PlayersController : MonoBehaviour
     {
         if (correr)
         {
-            transform.position += moveDirection * Time.deltaTime * moveSpeed * 2;
             transform.rotation = Quaternion.identity;
-            //playeRigidBody.velocity = new Vector2(direc * 2, playeRigidBody.velocity.y);
+            playeRigidBody.velocity = new Vector2(direc * 2, playeRigidBody.velocity.y);
         }
         else
         {
-            transform.position += moveDirection * Time.deltaTime * moveSpeed;
-            //playeRigidBody.velocity = new Vector2(direc, playeRigidBody.velocity.y);
+            playeRigidBody.velocity = new Vector2(direc, playeRigidBody.velocity.y);
         }
         LookingDirection();
     }
