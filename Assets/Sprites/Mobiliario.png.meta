@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7884271bce19ae945969730c522c9525
+guid: f9531012d3351ce4dae87f6249067d7b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PopUpVacio
+      name: Mobiliario_0
       rect:
         serializedVersion: 2
-        x: 259
-        y: 3459
-        width: 850
-        height: 826
+        x: 390
+        y: 4430
+        width: 1282
+        height: 1553
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f36f87a20c1442a4881d72dd80494099
-      internalID: 309443291
+      spriteID: ad0a08366d541744ebf2de0e180cb8a6
+      internalID: 2108719939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "intoxicaci\xF3n"
+      name: Mobiliario_1
       rect:
         serializedVersion: 2
-        x: 2484
-        y: 3455
-        width: 850
-        height: 825
+        x: 1765
+        y: 4418
+        width: 3080
+        height: 720
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69aa63cad384a9b44b9459305cad912b
-      internalID: 231382930
+      spriteID: 2e044e57120b8b9478833e9bbafe79f1
+      internalID: 1157588243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "intoxicaci\xF3nnopop"
+      name: Mobiliario_2
       rect:
         serializedVersion: 2
-        x: 3498
-        y: 3663
-        width: 570
-        height: 551
+        x: 4947
+        y: 4422
+        width: 1281
+        height: 1561
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f973b19446fc804db84d8be9610fb80
-      internalID: 189777323
+      spriteID: a97b385f4a5c94d4b9adb031d1bc2fe5
+      internalID: 2030395324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: amputar
+      name: Mobiliario_3
       rect:
         serializedVersion: 2
-        x: 263
-        y: 2400
-        width: 848
-        height: 825
+        x: 6455
+        y: 4612
+        width: 1617
+        height: 1211
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bbe27b5de8139f409638e2a29ef2c63
-      internalID: 1659622388
+      spriteID: 0e4bb5843c5bc484792aa69520c0bc77
+      internalID: 1193436178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "mu\xF1on"
+      name: Mobiliario_4
       rect:
         serializedVersion: 2
-        x: 1435
-        y: 2642
-        width: 696
-        height: 603
+        x: 390
+        y: 1777
+        width: 1282
+        height: 2358
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,41 +234,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0203599a1b4aea46b87f10f6fec37ef
-      internalID: -506642368
+      spriteID: 30ff35047036fc649ab02f35f646fcc7
+      internalID: 1757330202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cura
+      name: Mobiliario_5
       rect:
         serializedVersion: 2
-        x: 2487
-        y: 2395
-        width: 850
-        height: 826
+        x: 1761
+        y: 2599
+        width: 3066
+        height: 1535
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 301, y: 804, z: 319, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3800585d37d31b41a2c412c7bf42e32
-      internalID: -1168360563
+      spriteID: faddb7b6a1b75664988679bcc4143340
+      internalID: -281053328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: curanopop
+      name: Mobiliario_6
       rect:
         serializedVersion: 2
-        x: 3605
-        y: 2661
-        width: 448
-        height: 450
+        x: 4947
+        y: 1777
+        width: 1281
+        height: 2358
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bf55924b515a0841badeff0e7ad40a6
-      internalID: -328524499
+      spriteID: a80a971c7583a0a48a44affbffa3d0af
+      internalID: 326692442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "infecci\xF3n"
+      name: Mobiliario_7
       rect:
         serializedVersion: 2
-        x: 269
-        y: 1328
-        width: 851
-        height: 825
+        x: 6428
+        y: 2660
+        width: 1288
+        height: 1819
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,20 +297,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81104c79988c1ba44b187aae08279aef
-      internalID: -2031433163
+      spriteID: 5fd2e35d9940bae45beda7906220b2ae
+      internalID: -1638319745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calavera
+      name: Mobiliario_8
       rect:
         serializedVersion: 2
-        x: 1408
-        y: 1506
-        width: 648
-        height: 599
+        x: 148
+        y: 220
+        width: 1233
+        height: 1044
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,20 +318,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8111a37f4b138d4d835158eff5ac5dc
-      internalID: -1159237738
+      spriteID: af29bd71b690ab949b69f9a1d2187ab0
+      internalID: 389391905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sierra
+      name: Mobiliario_9
       rect:
         serializedVersion: 2
-        x: 2445
-        y: 1198
-        width: 850
-        height: 825
+        x: 1527
+        y: 221
+        width: 1235
+        height: 909
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,20 +339,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdc3ae709ca4eca4b9c7123433cb234c
-      internalID: -225366094
+      spriteID: 97d7f78866dc0874396be137e853d675
+      internalID: 1080332010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sierranopop2
+      name: Mobiliario_10
       rect:
         serializedVersion: 2
-        x: 3530
-        y: 1465
-        width: 653
-        height: 472
+        x: 2897
+        y: 220
+        width: 1233
+        height: 910
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,20 +360,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae751b88770a53d4d8691d6caa69ff24
-      internalID: -1595051706
+      spriteID: a488698c52e01cd48a3b81877c533b69
+      internalID: -1314546384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: venda
+      name: Mobiliario_11
       rect:
         serializedVersion: 2
-        x: 259
-        y: 245
-        width: 850
-        height: 826
+        x: 4316
+        y: 224
+        width: 1233
+        height: 910
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,20 +381,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b65c1e4c57bb7334fa53a93b91c93e28
-      internalID: 609122240
+      spriteID: 0a6061e397074754aaae817244b1d293
+      internalID: -2145824217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vendas
+      name: Mobiliario_12
       rect:
         serializedVersion: 2
-        x: 1479
-        y: 517
-        width: 584
-        height: 454
+        x: 5780
+        y: 75
+        width: 743
+        height: 1439
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,20 +402,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dace0bd432cb374cabf72f32eb2179d
-      internalID: -680938771
+      spriteID: a8bc51ba18dab1e4a81410505986ee7d
+      internalID: 1303953116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sierranopop
+      name: Mobiliario_13
       rect:
         serializedVersion: 2
-        x: 2877
-        y: 569
-        width: 1043
-        height: 338
+        x: 6556
+        y: 34
+        width: 808
+        height: 1484
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,8 +423,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 991b57371f39ecf49a7aafffb0756669
-      internalID: -1337823582
+      spriteID: a356e96601717044ca96f890196e3e5c
+      internalID: -809474225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobiliario_14
+      rect:
+        serializedVersion: 2
+        x: 7441
+        y: 87
+        width: 772
+        height: 1116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2505406b9d19534dab3a86c2333e052
+      internalID: -126523066
       vertices: []
       indices: 
       edges: []
@@ -440,27 +461,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Burbujas_12: -1903365963
-      Burbujas_16: 69853737
-      Burbujas_17: -1161506743
-      Burbujas_3: -1788346290
-      Burbujas_4: 935128862
-      Burbujas_5: 171832678
-      Burbujas_8: -1088627536
-      PopUpVacio: 309443291
-      amputar: 1659622388
-      calavera: -1159237738
-      cura: -1168360563
-      curanopop: -328524499
-      "infecci\xF3n": -2031433163
-      "intoxicaci\xF3n": 231382930
-      "intoxicaci\xF3nnopop": 189777323
-      "mu\xF1on": -506642368
-      sierra: -225366094
-      sierranopop: -1337823582
-      sierranopop2: -1595051706
-      venda: 609122240
-      vendas: -680938771
+      Mobiliario_0: 2108719939
+      Mobiliario_1: 1157588243
+      Mobiliario_10: -1314546384
+      Mobiliario_11: -2145824217
+      Mobiliario_12: 1303953116
+      Mobiliario_13: -809474225
+      Mobiliario_14: -126523066
+      Mobiliario_2: 2030395324
+      Mobiliario_3: 1193436178
+      Mobiliario_4: 1757330202
+      Mobiliario_5: -281053328
+      Mobiliario_6: 326692442
+      Mobiliario_7: -1638319745
+      Mobiliario_8: 389391905
+      Mobiliario_9: 1080332010
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
