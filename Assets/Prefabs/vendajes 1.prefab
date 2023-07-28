@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 8103629230043573656}
   - component: {fileID: -9060382904829465173}
   m_Layer: 0
-  m_Name: vendajes
+  m_Name: vendajes 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

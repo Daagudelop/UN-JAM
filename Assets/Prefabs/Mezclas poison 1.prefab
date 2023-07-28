@@ -4902,7 +4902,7 @@ GameObject:
   - component: {fileID: 2753094394803563952}
   - component: {fileID: 354247161520166044}
   m_Layer: 0
-  m_Name: Mezclas poison
+  m_Name: Mezclas poison 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
