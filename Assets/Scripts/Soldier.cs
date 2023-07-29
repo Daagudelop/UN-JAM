@@ -85,7 +85,7 @@ public class Soldier : MonoBehaviour
     private IEnumerator TimeOfDeathCoroutine()
     {
 
-        float _CastTimeLimit = Time.deltaTime + tiempoDeVida;
+        float _CastTimeLimit = Time.time + tiempoDeVida;
         Vector3 _PaddleScale = transform.localScale;
         while (Time.time < _CastTimeLimit)
         {
@@ -110,7 +110,7 @@ public class Soldier : MonoBehaviour
             if (playerController.tomar)
             {
                 
-                if (randomNeed == needs[1] && playerController.poseeVenda)
+                if (randomNeed == needs[1] && playerController.tijerasEstaCortando)
                 {
                     Debug.Log("nani");
                     currentState = states[2];

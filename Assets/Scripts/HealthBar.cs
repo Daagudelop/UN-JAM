@@ -11,6 +11,9 @@ public class HealthBar : MonoBehaviour
     float health = 1f;
     public float contadorcito;
     float tiempoFaltante;
+
+    public bool falta = true;
+
     void Start()
     {
         tiempoFaltante = timeToFill;
@@ -31,5 +34,6 @@ public class HealthBar : MonoBehaviour
         tiempoFaltante = timeToFill;
         bar.localScale = Vector3.one;
     }
+
 
 }

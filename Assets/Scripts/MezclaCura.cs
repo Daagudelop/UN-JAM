@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class MezclaCura : MonoBehaviour
 {
-    [SerializeField] bool mezclaCura      = false;
-    [SerializeField] bool mezclaPoison    = false;
-    [SerializeField] bool mezclaMuerte    = false;
-    [SerializeField] bool sierra          = false;
-    [SerializeField] bool vendaje         = false;
+    [SerializeField] bool mezclaCura = false;
+    [SerializeField] bool mezclaPoison = false;
+    [SerializeField] bool mezclaMuerte = false;
+    [SerializeField] bool sierra = false;
+    [SerializeField] bool vendaje = false;
     [SerializeField] bool resultadoMezcla = false;
-    [SerializeField] bool tijeras         = false;
-    [SerializeField] bool alquimista      = false;
+    [SerializeField] bool tijeras = false;
+    [SerializeField] bool alquimista = false;
 
     private PlayersController playerController;
     private GameObject prefabHealthBar;
@@ -29,13 +29,13 @@ public class MezclaCura : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,7 +45,7 @@ public class MezclaCura : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
+
         ToDetectPlayer(collision);
     }
 
@@ -64,8 +64,8 @@ public class MezclaCura : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
             Shine.Play();
-        
-        
+
+
     }
 
     void ToDetectPlayer(Collider2D collision)
@@ -89,7 +89,7 @@ public class MezclaCura : MonoBehaviour
                         collision.GetComponent<PlayersController>().alquimiaEstaMezclando = false;
                         //popUpObj.popUp.sprite = popUpObj.mezclaCura;
                     }
-                    
+
                     else if (mezclaPoison)
                     {
                         collision.GetComponent<PlayersController>().poseeMezclaCura = false;
@@ -150,40 +150,62 @@ public class MezclaCura : MonoBehaviour
                         collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
                         collision.GetComponent<PlayersController>().alquimiaEstaMezclando = false;
                     }
-                    
+
                     //playerController.estaOcupada = true;
                 }
                 else if (playerController.accion && playerController.poseeVenda)
                 {
                     if (tijeras)
                     {
+                        playerController.poseeVenda = false;
                         collision.GetComponent<PlayersController>().tijerasEstaCortando = true;
+                        collision.GetComponent<PlayersController>().quieto = true;
                         if (playerController.healthBar.timeToFill != 2.5f)
                         {
                             playerController.healthBar.Reinitiated();
                         }
                         playerController.healthBar.isRunning = true;
-                        if (playerController.healthBar.contadorcito <= playerController.healthBar.timeToFill)
+                        /*if (playerController.healthBar.contadorcito <= playerController.healthBar.timeToFill)
                         {
-                            collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
-                            tijeras = false;
-                        }
-                    }
-                    else if (alquimista)
-                    {
-                        collision.GetComponent<PlayersController>().alquimiaEstaMezclando = true;
-                        playerController.healthBar.Reinitiated();
-                        playerController.healthBar.isRunning = true;
-                        if (playerController.healthBar.contadorcito > playerController.healthBar.timeToFill)
-                        {
-                            collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
-                        }
-                    }
+                            //collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
+                            //tijeras = false;
+                        }*/
 
+                        StartCoroutine(EmpiezaAMover());
+
+                    }
                     //collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
                     //tijeras = false;
+                }
+                else if (playerController.accion && playerController.poseeMezclaCura)
+                {
+                    if (alquimista)
+                    {
+                        playerController.poseeMezclaCura = false;
+                        collision.GetComponent<PlayersController>().alquimiaEstaMezclando = true;
+                        collision.GetComponent<PlayersController>().quieto = true;
+                        if (playerController.healthBar.timeToFill != 2.5f)
+                        {
+                            playerController.healthBar.Reinitiated();
+                        }
+                        playerController.healthBar.isRunning = true;
+                        /*if (playerController.healthBar.contadorcito <= playerController.healthBar.timeToFill)
+                        {
+                            //collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
+                            //tijeras = false;
+                        }*/
+                        StartCoroutine(EmpiezaAMover());
+                    }
                 }
             }
         }
     }
+
+    private IEnumerator EmpiezaAMover()
+    {
+        yield return new WaitForSeconds(2.5f);
+        playerController.quieto = false;
+    }
 }
+
+

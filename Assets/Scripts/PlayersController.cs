@@ -26,6 +26,7 @@ public class PlayersController : MonoBehaviour
     public bool correr = false;
     public bool tomar  = false;
     public bool accion = false;
+    public bool quieto = false;
 
     private float ejeHorizontal;
     private float ejeVertical;
@@ -67,7 +68,10 @@ public class PlayersController : MonoBehaviour
     {
         if (GameManager.sharedInstanceGameManager.currentGameState == GameState.inGame)
         {
-            ActionCollector();
+            if (!quieto)
+            {
+                ActionCollector();
+            }
 
             if (accion && alquimiaEstaMezclando)
             {
