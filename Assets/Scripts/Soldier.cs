@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Soldier : MonoBehaviour
 {
-    string[] needs = new string[] { "amputar", "herido", "intoxicado", "infeccion" , "herido1"};
+    string[] needs = new string[] { "amputar", "herido", "herido1"};
     string[] states = new string[] { "enfermo", "muerto", "curado" };
     int randomIndex;
     string randomNeed;
@@ -24,8 +24,7 @@ public class Soldier : MonoBehaviour
         //spriteRendererPopUp = GetComponentInChildren<SpriteRenderer>();
         currentState = states[0];  // Inicia enfermo
         randomIndex = Random.Range(0, needs.Length);
-        //randomNeed = needs[randomIndex];
-        randomNeed = needs[1];
+        randomNeed = needs[randomIndex];
         ChangeSpritePopUp();
         print(randomNeed);
         StartCoroutine(TimeOfDeathCoroutine());
@@ -109,7 +108,7 @@ public class Soldier : MonoBehaviour
             playerController = collision.GetComponent<PlayersController>();
             if (playerController.tomar)
             {
-                
+
                 if (randomNeed == needs[1] && playerController.tijerasEstaCortando)
                 {
                     Debug.Log("nani");
@@ -117,6 +116,20 @@ public class Soldier : MonoBehaviour
                     StopCoroutine("TimeOfDeathCoroutine");
                     healthBar.isRunning = false;
                 }
+
+                else if (randomNeed == needs[2] && playerController.alquimiaEstaMezclando)
+                {
+                    currentState = states[2];
+                    StopCoroutine("TimeOfDeathCoroutine");
+                    healthBar.isRunning = false;
+                }
+                else if (randomNeed == needs[0] && playerController.poseeSierra)
+                {
+                    currentState = states[2];
+                    StopCoroutine("TimeOfDeathCoroutine");
+                    healthBar.isRunning = false;
+                }
+
             }
         }
     }
