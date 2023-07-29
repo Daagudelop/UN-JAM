@@ -38,9 +38,13 @@ public class PlayersController : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] int NumberOfThePlayer;
 
+    [SerializeField] float accionar = 2.5f;
+
     private Rigidbody2D playeRigidBody;
     private Animator playeAnimator;
     private SpriteRenderer playeSpriteRenderer;
+
+    [SerializeField]public HealthBar healthBar;
 
     private void Awake()
     {
@@ -48,6 +52,8 @@ public class PlayersController : MonoBehaviour
         playeAnimator = GetComponent<Animator>();
         playeSpriteRenderer = GetComponent<SpriteRenderer>();
         playerStartPosition = this.transform.position;
+        healthBar.isRunning = false;
+        
     }
 
     // Start is called before the first frame update
@@ -62,6 +68,17 @@ public class PlayersController : MonoBehaviour
         if (GameManager.sharedInstanceGameManager.currentGameState == GameState.inGame)
         {
             ActionCollector();
+
+            if (accion && alquimiaEstaMezclando)
+            {
+                healthBar.Reinitiated();
+                healthBar.isRunning = true;
+            }
+            else if (accion && tijerasEstaCortando)
+            {
+                healthBar.Reinitiated();
+                healthBar.isRunning = true;
+            }
         }
         else if (GameManager.sharedInstanceGameManager.currentGameState == GameState.gameOver)
         {
@@ -104,6 +121,7 @@ public class PlayersController : MonoBehaviour
             //--------------------------------
             //acciones
             tomar = Input.GetButton("tomar player 1");
+
             accion = Input.GetButton("accion player 1");
         }
         else if (NumberOfThePlayer == 2)
@@ -214,21 +232,6 @@ public class PlayersController : MonoBehaviour
         }
     }
 
-    void Recoger()
-    {
-        if (tomar)
-        {
-            
-        }
-    }
-
-    void Craft() 
-    {
-        if (accion)
-        {
-
-        }
-    }
 
     public void StartGame()
     {

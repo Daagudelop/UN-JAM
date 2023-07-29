@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class MezclaCura : MonoBehaviour
@@ -14,6 +15,7 @@ public class MezclaCura : MonoBehaviour
     [SerializeField] bool alquimista      = false;
 
     private PlayersController playerController;
+    private GameObject prefabHealthBar;
 
     [SerializeField] private ParticleSystem Shine;
     //[SerializeField] PopUps popUpObj;
@@ -87,28 +89,7 @@ public class MezclaCura : MonoBehaviour
                         collision.GetComponent<PlayersController>().alquimiaEstaMezclando = false;
                         //popUpObj.popUp.sprite = popUpObj.mezclaCura;
                     }
-                    else if (tijeras)
-                    {
-                        collision.GetComponent<PlayersController>().poseeMezclaCura = false;
-                        collision.GetComponent<PlayersController>().poseeMezclaMuerte = false;
-                        collision.GetComponent<PlayersController>().poseeMezclaPosion = false;
-                        collision.GetComponent<PlayersController>().poseeResultadoMezcla = false;
-                        collision.GetComponent<PlayersController>().poseeSierra = false;
-                        collision.GetComponent<PlayersController>().poseeVenda = false;
-                        collision.GetComponent<PlayersController>().tijerasEstaCortando = true;
-                        collision.GetComponent<PlayersController>().alquimiaEstaMezclando = false;
-                    }
-                    else if (alquimista)
-                    {
-                        collision.GetComponent<PlayersController>().poseeMezclaCura = true;
-                        collision.GetComponent<PlayersController>().poseeMezclaMuerte = false;
-                        collision.GetComponent<PlayersController>().poseeMezclaPosion = false;
-                        collision.GetComponent<PlayersController>().poseeResultadoMezcla = false;
-                        collision.GetComponent<PlayersController>().poseeSierra = false;
-                        collision.GetComponent<PlayersController>().poseeVenda = false;
-                        collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
-                        collision.GetComponent<PlayersController>().alquimiaEstaMezclando = true;
-                    }
+                    
                     else if (mezclaPoison)
                     {
                         collision.GetComponent<PlayersController>().poseeMezclaCura = false;
@@ -171,6 +152,36 @@ public class MezclaCura : MonoBehaviour
                     }
                     
                     //playerController.estaOcupada = true;
+                }
+                else if (playerController.accion && playerController.poseeVenda)
+                {
+                    if (tijeras)
+                    {
+                        collision.GetComponent<PlayersController>().tijerasEstaCortando = true;
+                        if (playerController.healthBar.timeToFill != 2.5f)
+                        {
+                            playerController.healthBar.Reinitiated();
+                        }
+                        playerController.healthBar.isRunning = true;
+                        if (playerController.healthBar.contadorcito <= playerController.healthBar.timeToFill)
+                        {
+                            collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
+                            tijeras = false;
+                        }
+                    }
+                    else if (alquimista)
+                    {
+                        collision.GetComponent<PlayersController>().alquimiaEstaMezclando = true;
+                        playerController.healthBar.Reinitiated();
+                        playerController.healthBar.isRunning = true;
+                        if (playerController.healthBar.contadorcito > playerController.healthBar.timeToFill)
+                        {
+                            collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
+                        }
+                    }
+
+                    //collision.GetComponent<PlayersController>().tijerasEstaCortando = false;
+                    //tijeras = false;
                 }
             }
         }

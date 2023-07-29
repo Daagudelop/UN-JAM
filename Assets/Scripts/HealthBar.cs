@@ -6,10 +6,10 @@ public class HealthBar : MonoBehaviour
 {
 
     [SerializeField]private Transform bar;
-    [SerializeField] private bool isRunning = true;
-    [SerializeField] private float timeToFill = 60;
+    [SerializeField] public bool isRunning = true;
+    [SerializeField] public float timeToFill = 60;
     float health = 1f;
-    float contadorcito;
+    public float contadorcito;
     float tiempoFaltante;
     void Start()
     {
@@ -23,8 +23,13 @@ public class HealthBar : MonoBehaviour
         {
             contadorcito += Time.deltaTime;
             bar.localScale = new Vector3(contadorcito / timeToFill, 1f);
-            
         }
-
     }
+
+    public void Reinitiated()
+    {
+        tiempoFaltante = timeToFill;
+        bar.localScale = Vector3.one;
+    }
+
 }

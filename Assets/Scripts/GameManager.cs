@@ -24,12 +24,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+
         if (sharedInstanceGameManager == null)//instance singleton
         {
             sharedInstanceGameManager = this;
         }
         //-----------------------
-
+        Time.timeScale = 0f;
     }
 
     void Start()
