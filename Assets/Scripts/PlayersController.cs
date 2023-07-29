@@ -158,8 +158,8 @@ public class PlayersController : MonoBehaviour
         LookingDirection();
 
         var Clamp = transform.position;
-        Clamp.x = Mathf.Clamp(transform.position.x, -8.2f, 8.2f);
-        Clamp.y = Mathf.Clamp(transform.position.y, -4.2f, 4.2f);
+        Clamp.x = Mathf.Clamp(transform.position.x, -6.4f, 7.4f);
+        Clamp.y = Mathf.Clamp(transform.position.y, -4.2f, 4f);
         transform.position = Clamp;
     }
 
